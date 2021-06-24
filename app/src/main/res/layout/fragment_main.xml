@@ -20,7 +20,7 @@
             android:layout_margin="10dp"
             android:layout_weight="5"
             android:background="@color/colorWhite"
-            android:queryHint="搜你想搜的" />
+            android:queryHint="搜索" />
 
 
         <LinearLayout
