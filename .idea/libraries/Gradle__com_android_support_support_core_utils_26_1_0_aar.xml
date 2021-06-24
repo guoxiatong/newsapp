@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:support-core-utils:26.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/2d8eeece4e8926b3c88fdc8537a9e1f7d7715dfa/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/2d8eeece4e8926b3c88fdc8537a9e1f7d7715dfa/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/2d8eeece4e8926b3c88fdc8537a9e1f7d7715dfa/output/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/7c734d009499cf05b8205b6eb52322f7/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/7c734d009499cf05b8205b6eb52322f7/res" />
+      <root url="file://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/7c734d009499cf05b8205b6eb52322f7/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

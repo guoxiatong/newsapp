@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support.test:runner:0.5@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/runner-0.5.aar/12ea49e1f9301fca8ac171f483a2493d/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/04fd99bfae3ea284da664256894202c645b37ccb/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/04fd99bfae3ea284da664256894202c645b37ccb/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/04fd99bfae3ea284da664256894202c645b37ccb/output/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/runner-0.5.aar/12ea49e1f9301fca8ac171f483a2493d/res" />
+      <root url="jar://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/runner-0.5.aar/12ea49e1f9301fca8ac171f483a2493d/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/runner-0.5.aar/12ea49e1f9301fca8ac171f483a2493d/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

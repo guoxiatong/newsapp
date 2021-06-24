@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:design:26.0.0-alpha1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.android/build-cache/b98401dc8e850a8c4fd8ea5426977acdc3acc6ad/output/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/bcd55dfa9e4b47f8c139aa95a613297a/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/b98401dc8e850a8c4fd8ea5426977acdc3acc6ad/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/b98401dc8e850a8c4fd8ea5426977acdc3acc6ad/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/b98401dc8e850a8c4fd8ea5426977acdc3acc6ad/output/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/bcd55dfa9e4b47f8c139aa95a613297a/res" />
+      <root url="file://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/bcd55dfa9e4b47f8c139aa95a613297a/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/bcd55dfa9e4b47f8c139aa95a613297a/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Cjz\\Desktop\\News\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "source": "C:\\Users\\Cjz\\Desktop\\News\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Cjz\\Desktop\\News\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi\\app_icon.png",
+        "source": "C:\\Users\\Cjz\\Desktop\\News\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Cjz\\Desktop\\News\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Cjz\\Desktop\\News\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    }
+]

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support.test.espresso:espresso-core:2.2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/a9c5f1f004fc3020f2c4f7d102d2aa55424de681/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/a9c5f1f004fc3020f2c4f7d102d2aa55424de681/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/a9c5f1f004fc3020f2c4f7d102d2aa55424de681/output/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/espresso-core-2.2.2.aar/edf95190717f75d8fe23ec65fd4d5cef/res" />
+      <root url="jar://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/espresso-core-2.2.2.aar/edf95190717f75d8fe23ec65fd4d5cef/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../WebDownload/gradle-6.7.1-bin/caches/transforms-1/files-1.1/espresso-core-2.2.2.aar/edf95190717f75d8fe23ec65fd4d5cef/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
