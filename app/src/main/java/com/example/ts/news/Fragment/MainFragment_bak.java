@@ -53,8 +53,7 @@ public class MainFragment_bak extends Fragment implements NewsAdapter.CallBack {
 
     private void initNews() {
         for (int i = 0; i < 30; i++) {
-//            News news = new News(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher), "这是新闻" + (i + 1) + "的标题");
-//            newsList.add(news);
+
         }
     }
 

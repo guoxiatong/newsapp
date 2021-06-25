@@ -9,9 +9,7 @@ import android.widget.Button;
 import com.example.ts.news.R;
 import com.example.ts.news.Utils.ApplicationUtil;
 
-/**
- * Created by ts on 18-8-20.
- */
+//登入或者注册界面
 
 public class LoginOrRegisterActivity extends AppCompatActivity {
     private Button login, register;

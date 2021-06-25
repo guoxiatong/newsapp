@@ -32,9 +32,6 @@ import java.util.List;
 import java.util.Random;
 
 
-/**
- * Created by zyc on 21-6-12.
- */
 
 public class TechFragment extends Fragment implements LoadListView.ILoadListener,
         LoadListView.RLoadListener, NewsAdapter.CallBack {

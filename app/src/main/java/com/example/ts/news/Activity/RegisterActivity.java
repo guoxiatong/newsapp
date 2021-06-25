@@ -29,7 +29,7 @@ import com.example.ts.news.Utils.MyDatabaseHelper;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-
+//注册界面的逻辑
 public class RegisterActivity extends AppCompatActivity {
 
     private MyDatabaseHelper dbHelper;
@@ -59,6 +59,7 @@ public class RegisterActivity extends AppCompatActivity {
         shangchuan_head.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //获取系统对内存的读权限
                 if (ContextCompat.checkSelfPermission(RegisterActivity.this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(RegisterActivity.this,
@@ -84,9 +85,9 @@ public class RegisterActivity extends AppCompatActivity {
                         //组装数据
                         values.put("name", username_str);
                         values.put("password", userpassword_str);
-
+                        //插入数据
                         db.insert("User", null, values);
-
+                        //创建完后切换到登入界面
                         startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                         finish();
                     } else {
@@ -104,6 +105,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         ApplicationUtil.getInstance().addActivity(this);
     }
+    //查询权限的获取情况
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
@@ -116,7 +118,7 @@ public class RegisterActivity extends AppCompatActivity {
                 break;
         }
     }
-
+    //打开相册
     private void openAlbum() {
         Intent intent = new Intent("android.intent.action.GET_CONTENT");
         intent.setType("image/*");
@@ -139,6 +141,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
     private void setHead(String imgPath) {
         if (imgPath != null) {
+            //使用位图保存图片
             Bitmap bitmap = BitmapFactory.decodeFile(imgPath);
             Bitmap round = AlbumUtil.toRoundBitmap(bitmap);
             try {

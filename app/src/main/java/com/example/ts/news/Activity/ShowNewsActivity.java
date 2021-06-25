@@ -37,9 +37,10 @@ public class ShowNewsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_news);
         initView();
         helper = new MyDatabaseHelper(this, "UserDB.db", null, 1);
-
+        //加载条
         mDialog = new ProgressDialog(ShowNewsActivity.this);
         mDialog.setMessage("玩命加载ing");
+        //Webview的加载
         show_news.setWebViewClient(new WebViewClient() {
             //网页加载时的回调
             @Override

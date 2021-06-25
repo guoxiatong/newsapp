@@ -53,7 +53,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
 
     private MyDatabaseHelper helper;
 
-
+    //更新阅读时间
     final Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -72,6 +72,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
             }
         }
     };
+    // 通过子线程更新阅读时间
     final Thread thread = new Thread(new Runnable() {
         @Override
         public void run() {
@@ -110,6 +111,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
 
         request_authentication.setOnClickListener(this);
 
+        // 换头像
         try {
             String path = getContext().getCacheDir().getPath();
             String fileName = "user_head";
@@ -174,7 +176,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-
+    //设置头像，通过将图片存为位图来保存
     private void setHead(String imgPath) {
         if (imgPath != null) {
             Bitmap bitmap = BitmapFactory.decodeFile(imgPath);

@@ -27,11 +27,11 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private LinearLayout ll_main, ll_setting, ll_mine;
-
+    // 三个界面的帧布局
     private MainFragment mainFragment;
     private SettingFragment settingFragment;
     private MineFragment mineFragment;
-
+    //帧布局的列表
     private List<Fragment> fragmentList = new ArrayList<>();
 
     private ImageView img_main, img_seting, img_mine;
@@ -71,14 +71,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initFragment() {
+        //默认主界面在新闻
         mainFragment = new MainFragment();
         addFragment(mainFragment);
         showFragment(mainFragment);
 
     }
 
-    /*添加fragment*/
+    //添加帧布局
     private void addFragment(Fragment fragment) {
+        // 通过 fragmentTransaction来动态加载或者隐藏界面
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         if (!fragment.isAdded()) {
             transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
@@ -87,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    /*显示fragment*/
+    //显示帧布局
     private void showFragment(Fragment fragment) {
         for (Fragment frag : fragmentList) {
             if (frag != fragment) {
@@ -100,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         transaction.show(fragment).commit();
     }
 
-
+    //切换不同的新闻界面，通过点击的id来判断
     @Override
     public void onClick(View view) {
         switch (view.getId()) {

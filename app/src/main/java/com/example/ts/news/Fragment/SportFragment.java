@@ -30,9 +30,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by zyc on 21-6-12.
- */
 public class SportFragment extends Fragment implements LoadListView.ILoadListener,
         LoadListView.RLoadListener, NewsAdapter.CallBack {
     final String url = "http://api.tianapi.com/esports/?key=95ce449e3009c2885fac9ed11ecabb05&num=30";

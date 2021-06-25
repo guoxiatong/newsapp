@@ -71,7 +71,7 @@ public class HttpUtils {
             dialog = new AlertDialog.Builder(activity)
                     .setTitle("网络状态提示")
                     .setMessage("当前没有可以使用的网络，请设置网络！")
-                    .setIcon(R.mipmap.app_icon)
+                    .setIcon(R.mipmap.icon)
                     .setCancelable(false)
                     .setPositiveButton("确定",
                             new DialogInterface.OnClickListener() {

@@ -12,10 +12,7 @@ import com.example.ts.news.R;
 
 import java.util.List;
 
-/**
- * Created by ts on 18-8-20.
- */
-
+//用于对接数据和分类
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHodler> {
     private List<String> categoryList;
 

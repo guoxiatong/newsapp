@@ -77,11 +77,12 @@ public class MiliFragment extends Fragment implements LoadListView.ILoadListener
         });
         return view;
     }
-
+    // 子线程来读取json数据然后解析
     private void initNews() {
         new Thread(new Runnable() {
             @Override
             public void run() {
+
                 String jsonData = HttpUtils.requestHttp(url);
                 parseJSONWithGSON(jsonData);
             }
@@ -89,7 +90,7 @@ public class MiliFragment extends Fragment implements LoadListView.ILoadListener
 
     }
 
-
+    //解析json数据
     private void parseJSONWithGSON(String jsonData) {
 
         try {
@@ -100,6 +101,7 @@ public class MiliFragment extends Fragment implements LoadListView.ILoadListener
                 String imgUrl = json_news.getString("picUrl");
                 /**
                  * 采取三级缓存策略加载图片
+                 * 网络，本地，内存
                  */
 
                 Bitmap bitmap = myBitmapUtils.getBitmap(imgUrl);

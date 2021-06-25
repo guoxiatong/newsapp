@@ -6,10 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.List;
 
-/**
- * Created by ts on 18-8-22.
- */
-
+//用于对接数据和帧布局
 public class FragmentAdapter extends FragmentPagerAdapter{
     private List<Fragment> fragmentList;
     private List<String> titleList;

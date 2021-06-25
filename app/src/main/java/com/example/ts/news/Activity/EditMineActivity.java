@@ -16,7 +16,7 @@ import com.example.ts.news.R;
 import com.example.ts.news.Utils.ApplicationUtil;
 import com.example.ts.news.Utils.MyDatabaseHelper;
 import com.example.ts.news.Utils.SharedPreUtil;
-
+//修改信息的逻辑处理关系
 public class EditMineActivity extends AppCompatActivity {
 
     private EditText update_username, update_password, update_repassword;
@@ -36,7 +36,7 @@ public class EditMineActivity extends AppCompatActivity {
         initView();
 
         dbHelper = new MyDatabaseHelper(this, "UserDB.db", null, 1);
-
+        //获取到当前的用户名
         username = (String) SharedPreUtil.getParam(EditMineActivity.this, SharedPreUtil.LOGIN_DATA, "");
         update_username.setText(username);
 
@@ -45,7 +45,7 @@ public class EditMineActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 updateUser();
-                //finish();
+
             }
         });
         ApplicationUtil.getInstance().addActivity(this);
@@ -59,14 +59,14 @@ public class EditMineActivity extends AppCompatActivity {
         update_repassword = (EditText) findViewById(R.id.update_repassword);
 
     }
-
+    //更改密码
     private void updateUser() {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         String update_username_str = update_username.getText().toString();
         String update_password_str = update_password.getText().toString();
         String update_repassword_str = update_repassword.getText().toString();
-
+        //确保密码和之前的密码相同，输入正确密码才可以进入修改
         if (update_password_str.equals(update_repassword_str)) {
             db.execSQL("update User set name = ?,password = ? where name = ?",
                     new String[]{update_username_str, update_password_str, username});

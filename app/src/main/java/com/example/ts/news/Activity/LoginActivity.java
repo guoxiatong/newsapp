@@ -23,21 +23,18 @@ import com.example.ts.news.Utils.TimeCount;
 
 import java.io.File;
 import java.io.FileInputStream;
-
+//登入的逻辑
 public class LoginActivity extends AppCompatActivity {
     private MyDatabaseHelper dbHelper;
     private Button check_user;
     private EditText username, userpassword;
     private ImageView login_head;
 
-    //加载User实例
-    //User user = User.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
         dbHelper = new MyDatabaseHelper(this, "UserDB.db", null, 1);
 
@@ -49,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         login_head = (ImageView) findViewById(R.id.login_head);
 
         try {
+            //加载缓存的图片
             String path = getCacheDir().getPath();
             String fileName = "user_head";
             File file = new File(path, fileName);
@@ -71,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                 SQLiteDatabase db = dbHelper.getReadableDatabase();
                 String username_str = username.getText().toString();
                 String userpassword_str = userpassword.getText().toString();
-
+                //查询是否存在用户
                 Cursor cursor = db.rawQuery("select * from User where name=?", new String[]{username_str});
                 if (cursor.getCount() == 0) {
                     Toast.makeText(LoginActivity.this, "用户名不存在！", Toast.LENGTH_SHORT).show();
@@ -81,9 +79,9 @@ public class LoginActivity extends AppCompatActivity {
                         if (userpassword_str.equals(userpassword_db)) {
                             SharedPreUtil.setParam(LoginActivity.this, SharedPreUtil.IS_LOGIN, true);
                             SharedPreUtil.setParam(LoginActivity.this, SharedPreUtil.LOGIN_DATA, username_str);
-                            //user.setUsername(username_str);
-                            //user.setPassword(userpassword_str);
+                            //和主界面传递登入信息
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            //得到当前时间的单例
                             TimeCount.getInstance().setTime(System.currentTimeMillis());
                             startActivity(intent);
                             finish();

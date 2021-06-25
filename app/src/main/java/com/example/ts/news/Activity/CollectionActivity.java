@@ -25,7 +25,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
+//*
+// */
 public class CollectionActivity extends AppCompatActivity implements NewsAdapter.CallBack {
 
     private List<News> newsList = new ArrayList<>();
@@ -35,17 +36,18 @@ public class CollectionActivity extends AppCompatActivity implements NewsAdapter
     private NewsAdapter adapter;
 
     private MyDatabaseHelper helper;
-
+    //收藏新闻逻辑处理
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collection);
+        //数据库的帮助类
         helper = new MyDatabaseHelper(this, "UserDB.db", null, 1);
         initView();
         initNews();
-
+        //设置适配器
         collection.setAdapter(adapter);
-
+        //为每个item添加监听器
         collection.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -59,6 +61,7 @@ public class CollectionActivity extends AppCompatActivity implements NewsAdapter
 
 
     private void initNews() {
+        //创建一个子线程来获取我们的收藏信息
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -101,23 +104,6 @@ public class CollectionActivity extends AppCompatActivity implements NewsAdapter
         }).start();
 
 
-
-
-       /* SharedPreferences sp = getSharedPreferences("collection", MODE_PRIVATE);
-        HashMap<String, String> map = (HashMap<String, String>) sp.getAll();
-        Iterator<Map.Entry<String, String>> iter = map.entrySet().iterator();
-
-        while (iter.hasNext()) {
-            Map.Entry<String, String> data = iter.next();
-            //取出标题
-            String title = data.getKey();
-            //取出网址
-            String url = data.getValue();
-            //往数据源中填充数据
-            News news = new News(BitmapFactory.decodeResource(getResources(),
-                    R.mipmap.ic_launcher), title, url);
-            newsList.add(news);
-        }*/
     }
 
     private void initView() {
@@ -135,17 +121,6 @@ public class CollectionActivity extends AppCompatActivity implements NewsAdapter
         newsList.remove(position);
         adapter.notifyDataSetChanged();
         Toast.makeText(this, "该新闻已被移除收藏夹！", Toast.LENGTH_SHORT).show();
-
-        /*
-        int position = Integer.parseInt(view.getTag().toString());
-        SharedPreferences sp = getSharedPreferences("collection", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sp.edit();
-        editor.remove(newsList.get(position).getNews_title());
-        editor.apply();
-        newsList.remove(position);
-        adapter.notifyDataSetChanged();
-
-        Toast.makeText(this, "该新闻已被移除收藏夹！", Toast.LENGTH_SHORT).show();
-        */
+        
     }
 }

@@ -16,7 +16,7 @@ public class WelcomeActivity extends AppCompatActivity {
     //private boolean flag = false;
     private Button btn_jump;
 
-
+    //Handler传递是否登入的信息，确保进入的时候是对应的界面
     final Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -42,6 +42,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
     };
 
+    //开始界面点击自动跳过，不点击则三秒后
     final Message message = new Message();
     final Thread thread = new Thread(new Runnable() {
         @Override
@@ -94,24 +95,4 @@ public class WelcomeActivity extends AppCompatActivity {
 
         ApplicationUtil.getInstance().addActivity(this);
     }
-    /*
-    //设置动画属性
-    private void setAnimation() {
-        //开启后台线程
-        Timer timer = new Timer();
-        TimerTask timerTask = new TimerTask() {
-            @Override
-            public void run() {
-                if (flag)
-                    return;
-                else {
-                    Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            }
-        };
-        timer.schedule(timerTask, 3000);
-    }
-*/
 }
